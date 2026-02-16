@@ -1,0 +1,123 @@
+$primary-color: #e73265;
+$border-radius: 12px;
+$body-color:#6e6e6e;
+$shadow-color: rgba(0, 0, 0, 0.1); 
+
+@mixin card-hover-effect{
+    transition: all ease 0.3s;
+
+    &:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px $shadow-color;
+    }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: BlinkMacSystemFont;
+  background: $body-color;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.product-card {
+  max-width: 350px;
+  background: white;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: 0 5px 20px $shadow-color;
+  
+  @include card-hover-effect;
+  
+  &__image {
+    height: 250px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+
+  &__content {
+    padding: 24px;
+  }
+  
+
+  &__title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #2c3e50;
+
+    
+  }
+  
+
+  &__description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+  }
+  
+
+  &__price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 20px;
+    
+
+    &::before {
+      content: 'Цена: ';
+      font-size: 1rem;
+      color: #999;
+      font-weight: normal;
+    }
+    
+  }
+  
+
+  &__button {
+    width: 100%;
+    padding: 14px;
+    background: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    
+
+    &:hover {
+      background: #fb215e;
+    }
+    
+    &:active {
+      transform: scale(0.9);
+    }
+    
+  }
+}

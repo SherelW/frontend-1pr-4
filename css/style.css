@@ -1,0 +1,92 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: BlinkMacSystemFont;
+  background: #6e6e6e;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-card {
+  max-width: 350px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all ease 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.product-card__image {
+  height: 250px;
+  overflow: hidden;
+}
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.product-card__image img:hover {
+  transform: scale(1.1);
+}
+.product-card__content {
+  padding: 24px;
+}
+.product-card__title {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+.product-card__description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+.product-card__price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e73265;
+  margin-bottom: 20px;
+}
+.product-card__price::before {
+  content: "Цена: ";
+  font-size: 1rem;
+  color: #999;
+  font-weight: normal;
+}
+.product-card__button {
+  width: 100%;
+  padding: 14px;
+  background: #e73265;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.product-card__button:hover {
+  background: #fb215e;
+}
+.product-card__button:active {
+  transform: scale(0.9);
+}
+
+/*# sourceMappingURL=style.css.map */
